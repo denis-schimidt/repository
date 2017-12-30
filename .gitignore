@@ -6,3 +6,6 @@ target/*
 /target/
 .gradle/
 bin/
+.idea/*
+build/
+out/
