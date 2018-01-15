@@ -1,7 +1,6 @@
 package com.elo7.estudo.model;
 
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -13,6 +12,13 @@ public class Person {
     private String id;
     private String name;
     private int age;
+
+    public Person() {}
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 
     public String getId() {
         return id;

@@ -32,14 +32,22 @@ And then go to http://localhost:8080 to test the API's.
 
 You can try the following API's once the server is running.
 
-GET __/person__
+GET __/persons__
 
-``` curl http://localhost:8080/person -v -u fulano:password```
+``` curl http://localhost:8080/persons -v -u fulano:password```
 
-GET __/person/{id}__
+GET __/persons/{id}__
 
-``` curl http://localhost:8080/person/{id} -v -u denis:password```
+``` curl http://localhost:8080/persons/{id} -v -u denis:password```
 
-POST __/person__
+POST __/persons__
 
-``` curl -d '{"name":"Maria","age":30}' -H "Content-Type: application/json" http://localhost:8080/person -v -u denis:password```
+``` curl -X POST -d '{"name":"Maria","age":30}' -H "Content-Type: application/json" http://localhost:8080/persons -v -u denis:password```
+
+PUT __/persons__
+
+``` curl -X PUT -d '{"id":"<ID>", "name":"Maria","age":30}' -H "Content-Type: application/json" http://localhost:8080/persons -v -u denis:password```
+
+DELETE __/persons/{id}__
+
+``` curl -X DELETE http://localhost:8080/persons/{id} -v -u denis:password```
